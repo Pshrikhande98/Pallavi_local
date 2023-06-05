@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-MyName ='Pallavi'
-myname = 'Pallu'
-gender = 'True'
+MyName = "Pallu";
+myname ="Pallavi";
+gender =true;
 }
