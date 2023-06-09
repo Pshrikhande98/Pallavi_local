@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StudentRoutingModule } from './student-routing.module';
-import { StudentComponent } from './student.component';
+import { StudentActivityComponent } from './student-activity/student-activity.component';
+import { StudentDemoComponent } from './student-demo/student-demo.component';
 
 
 @NgModule({
   declarations: [
-    StudentComponent
+    StudentActivityComponent,
+    StudentDemoComponent
   ],
   imports: [
     CommonModule,

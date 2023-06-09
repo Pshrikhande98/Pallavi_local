@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+
 
 const routes: Routes = [ 
-  { path : 'login', component : LoginComponent},
-  {path : 'home', component : HomeComponent},
-  
-{ path: 'admin', loadChildren:()=> import('./admin/admin.module').then(mod => mod.AdminModule)},
-  
-{ path: 'student', loadChildren: () => import('./student/student.module').then(m => m.StudentModule) }
+  {path : '', component : LandingComponent},
+  {path : 'landing', component : LandingComponent },
+  {path : 'login', component : LoginComponent},
+  {path : 'SignUp', component : SignUpComponent},
+  { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 
 @NgModule({
