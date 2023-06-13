@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DirectivesInAngulerComponent } from './directives-in-anguler/directives-in-anguler.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     LandingComponent,
     LoginComponent,
     SignUpComponent,
+    DirectivesInAngulerComponent,
   ],
   imports: [
     BrowserModule,
