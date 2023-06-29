@@ -7,6 +7,9 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngulerComponent } from './directives-in-anguler/directives-in-anguler.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,18 @@ import { DirectivesInAngulerComponent } from './directives-in-anguler/directives
     LoginComponent,
     SignUpComponent,
     DirectivesInAngulerComponent,
+    ParentComponent,
+    ChildComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

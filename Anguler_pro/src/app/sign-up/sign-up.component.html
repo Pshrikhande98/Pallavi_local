@@ -1,1 +1,45 @@
-<p>sign-up works!</p>
+<div> 
+    <h2 class="form-heading"> Sign Up Form</h2>
+    <form class="signup-form-container" [formGroup]="signUpForm">
+
+        <label>Name</label><br>
+        <input type="text" formControlName="fullName"><br>
+        <span *ngIf="!signUpForm.get('fullName')?.touched 
+         && !signUpForm.get('fullName')?.valid
+         && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here</span>
+        <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['required'] 
+                 && !signUpForm.get('fullName')?.valid
+                 && signUpForm.get('fullName')?.touched">
+            Name is required
+        </span>
+        <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['pattern']">
+            Enter Alphabets Only
+        </span>
+        <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['minlength'] 
+        && !signUpForm.get('fullName')?.errors?.['pattern']">
+           Name must contain 10 Alphabets
+        </span><br>
+
+        <label>MobNo</label><br>
+        <input type="text" formControlName="mobNo"><br>
+        <span *ngIf="!signUpForm.get('mobNo')?.touched">Hint: Enter you Mobile Number</span>
+        <span *ngIf="signUpForm.get('mobNo')?.errors?.['pattern']
+        && signUpForm.get('mobNo')?.touched" class="err">Mobile no should be in Integers</span>
+      <br><br>
+      <label>Email Id</label>
+      <input type="text" formControlName="email"><br>
+      <span *ngIf="!signUpForm.get('email')?.touched">Hint: Enter you Email Id</span>
+      <span *ngIf="!signUpForm.get('email')?.errors?.['pattern']
+        && signUpForm.get('email')?.touched" class="err">Email Id should be in Integers or Number</span>
+       <br><br>
+        <button [disabled]="!signUpForm.valid"  (click)="submit()"> Submit </button>
+    </form>
+</div>
+
+
+<!--      *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">
+            Name is required
+        </span>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
+            Please Enter Valid Name
+        </span><br> -->

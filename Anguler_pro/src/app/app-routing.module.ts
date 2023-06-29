@@ -4,6 +4,8 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngulerComponent } from './directives-in-anguler/directives-in-anguler.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 const routes: Routes = [ 
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path : 'login', component : LoginComponent},
   {path : 'SignUp', component : SignUpComponent},
   {path : 'directives', component : DirectivesInAngulerComponent},
+  {path : 'parent', component : ParentComponent},
+  {path : 'child', component : ChildComponent},
   { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 

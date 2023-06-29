@@ -1,0 +1,11 @@
+<p>child works!</p>
+<h3>Hiii</h3>
+
+<button (click)="get()">Click</button>
+<p>{{data}}</p>
+data from parent {{dataFromParent}}
+<br>
+<button (click)="sendData()">click</button>
+<br>
+surName : <input type="text" (keyup)="sendData($event)">
+
