@@ -3,7 +3,7 @@
     <form class="signup-form-container" [formGroup]="signUpForm">
 
         <label>Name</label><br>
-        <input type="text" formControlName="fullName"><br>
+        <input type="text" formControlName="fullName" appCharOnly><br>
         <span *ngIf="!signUpForm.get('fullName')?.touched 
          && !signUpForm.get('fullName')?.valid
          && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here</span>
@@ -21,7 +21,7 @@
         </span><br>
 
         <label>MobNo</label><br>
-        <input type="text" formControlName="mobNo"><br>
+        <input type="text" formControlName="mobNo" appNumOnly ><br>
         <span *ngIf="!signUpForm.get('mobNo')?.touched">Hint: Enter you Mobile Number</span>
         <span *ngIf="signUpForm.get('mobNo')?.errors?.['pattern']
         && signUpForm.get('mobNo')?.touched" class="err">Mobile no should be in Integers</span>
@@ -32,6 +32,8 @@
       <span *ngIf="!signUpForm.get('email')?.errors?.['pattern']
         && signUpForm.get('email')?.touched" class="err">Email Id should be in Integers or Number</span>
        <br><br>
+       <label>City :</label>
+       <input type="text" formControlName ="city"> <br><br>
         <button [disabled]="!signUpForm.valid"  (click)="submit()"> Submit </button>
     </form>
 </div>

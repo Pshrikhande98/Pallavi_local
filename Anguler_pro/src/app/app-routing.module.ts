@@ -6,7 +6,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngulerComponent } from './directives-in-anguler/directives-in-anguler.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
-
+import { ApiCallsComponent } from './api-calls/api-calls.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [ 
   {path : '', component : LandingComponent},
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path : 'directives', component : DirectivesInAngulerComponent},
   {path : 'parent', component : ParentComponent},
   {path : 'child', component : ChildComponent},
+  {path : 'ApiCalls', component : ApiCallsComponent},
+  {path : 'form' , component : FormComponent},
   { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 

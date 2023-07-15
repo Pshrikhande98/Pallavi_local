@@ -33,6 +33,7 @@ export class SignUpComponent {
           fullName : ['',[Validators.required, Validators.pattern("[a-zA-Z ]*$"),Validators.minLength(10)]],
           mobNo:['',[Validators.pattern("[0-9]*$")]],
           email:['',[Validators.pattern("[a-zA-z]*$")]],
+          city : ['']
         })
 
       }

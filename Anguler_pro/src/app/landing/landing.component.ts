@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { StoringDataServiceService } from '../storing-data-service.service';
+import { CommonApiCallService } from '../common-api-call.service';
 
 @Component({
   selector: 'app-landing',
@@ -12,8 +13,10 @@ export class LandingComponent {
   userName!:string;
   list:any;
   studentsData:any;
+  getApiResponse :any; 
   constructor(private router : Router,
-    private sDataService : StoringDataServiceService ){
+    private sDataService : StoringDataServiceService ,
+    private CommonApiCallService : CommonApiCallService ){
   }
   
   ngOnInit(){
@@ -36,4 +39,24 @@ export class LandingComponent {
   parent(){
     this.router.navigateByUrl('parent');
   }
+  from(){
+    this.router.navigateByUrl('form');
+  }
+  apicalls(){
+    this.router.navigateByUrl('ApiCalls');
+  } 
+  getApiCall(){
+    console.log('get Method Calling');
+    let endpoint = "admin";
+    this.CommonApiCallService.getApiCall(endpoint).subscribe (resp =>{
+      this.getApiResponse = Response ;
+    })
+    console.log(" this.getApiResponse", this.getApiResponse);
+  }
+   getbyId(){
+    this.CommonApiCallService.getById("admin",1).subscribe(response =>{
+      console.log(response);
+    })
+
+}
 }

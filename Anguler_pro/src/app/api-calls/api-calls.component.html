@@ -1,0 +1,11 @@
+<p>api-calls works!</p>
+
+<form [formGroup]="ApiCalls">
+    <label >Name :</label>
+    <input type="text" formControlName="name" > <br> <br>
+    <label>Phone No :</label>
+    <input type="text" formControlName="Pno"><br> <br>
+    <label>Email : </label>
+    <input type="text" formControlName="email"><br> <br>
+    <button (click)="saved()"> Click</button>
+    </form>

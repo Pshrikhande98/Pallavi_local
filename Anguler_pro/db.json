@@ -1,0 +1,32 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "Name": "Pallavi"
+    },
+    {
+      "name": "oeflffef",
+      "Pno": "96954896214",
+      "email": "wpmfld,f;s",
+      "id": 2
+    },
+    {
+      "name": "pallafong",
+      "Pno": "9587642652",
+      "email": "ofglfkogrk",
+      "id": 3
+    }
+  ],
+  "student": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "owner": {
+    "name": "typicode"
+  }
+}
