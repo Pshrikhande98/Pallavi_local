@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent {
-  signUpForm!: FormGroup
+  signUpForm!: FormGroup;
   //name:string = 'poonam';
    //name!:string;
+   matForm! : FormGroup;
    student = {
     name: 'poonam',
     age:30,
@@ -25,6 +26,7 @@ export class SignUpComponent {
      ngOnInit(){
       this.formDef();
       this.sDataService.studentData =  this.student; //set student obj to service property studentData
+      this.matFormData();
    }
 
 
@@ -45,5 +47,11 @@ export class SignUpComponent {
         this.sDataService.listOfUsers = ['poonam','pooja','nitin','shri'];
         this.router.navigateByUrl('landing');
        }
- 
+
+       matFormData(){
+        this.matForm = this.fb.group({
+          fullname : ['',[Validators.required]]
+
+        })
+       }
       }

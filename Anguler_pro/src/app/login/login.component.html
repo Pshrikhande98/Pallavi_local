@@ -39,13 +39,6 @@
        <span class="span-err" *ngIf="gender.errors?.['required'] ">Gender is required </span>
         <button class="submit-btn" [disabled]="!loginForm.valid"
          (click)="submit(loginForm.value)"> Submit </button>
-    </form>
+    </form> 
 </div>
 
-<div>
-    <br>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-
-</div>
-<br> <br>

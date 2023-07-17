@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ userFullName : any;
 listOfUsers:any;
 studentData: any;
   setData!: String;
+
+  name = new Subject<string>();
 
 constructor() { }
  

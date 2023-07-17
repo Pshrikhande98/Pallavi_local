@@ -14,8 +14,10 @@ import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
 import { ApiCallsComponent } from './api-calls/api-calls.component';
 import { CharOnlyDirective } from './char-only.directive';
-import { FormComponent } from './form/form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Subject1Component } from './subject1/subject1.component';
+import { Subject2Component } from './subject2/subject2.component';
+import { Subject3Component } from './subject3/subject3.component';
 
 
 @NgModule({
@@ -29,7 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChildComponent,
     ApiCallsComponent,
     CharOnlyDirective,
-    FormComponent,
+    Subject1Component,
+    Subject2Component,
+    Subject3Component,
+
   
   ],
   imports: [

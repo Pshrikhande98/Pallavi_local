@@ -45,3 +45,38 @@
         <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
             Please Enter Valid Name
         </span><br> -->
+
+        <div>
+            <br>
+            <button mat-raised-button color="primary">Primary</button>
+            <button mat-raised-button color="accent">Accent</button>
+        
+        </div>
+        <br> <br>
+        <div><br>
+
+            <button mat-button color="primary">Primary</button>
+            <button mat-button color="accent">Accent</button>
+
+        </div>
+
+        <div>
+            <mat-checkbox> Checkbox</mat-checkbox>
+        </div>
+
+
+      <form [formGroup]="matForm">
+        <mat-form-field> 
+            <mat-label> Full Name </mat-label>
+            <input matInput fromControlName="fullname">
+            <mat-hint *ngIf="!matForm.get('fullname')?.touched">Please Enter Full Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('fullname')?.hasError('required')">
+            Full Name is required
+        </mat-error>
+        </mat-form-field>
+        </form> 
+
+
+        <br><br><br><br>
+
+        --------------------

@@ -39,9 +39,6 @@ export class LandingComponent {
   parent(){
     this.router.navigateByUrl('parent');
   }
-  from(){
-    this.router.navigateByUrl('form');
-  }
   apicalls(){
     this.router.navigateByUrl('ApiCalls');
   } 
@@ -58,5 +55,8 @@ export class LandingComponent {
       console.log(response);
     })
 
+}
+subject(){
+  this.router.navigateByUrl('Subject1');
 }
 }

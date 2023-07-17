@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NumOnlyDirective } from '../student/num-only.directive';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule
  ],
  exports:[
   CommonModule,
@@ -24,7 +30,10 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     HttpClientModule,
     NumOnlyDirective,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule
  ]
 })
 export class SharedModule { }
