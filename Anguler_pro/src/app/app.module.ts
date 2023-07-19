@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Subject1Component } from './subject1/subject1.component';
 import { Subject2Component } from './subject2/subject2.component';
 import { Subject3Component } from './subject3/subject3.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { Subject3Component } from './subject3/subject3.component';
     Subject1Component,
     Subject2Component,
     Subject3Component,
+    ViewChildComponent,
 
   
   ],

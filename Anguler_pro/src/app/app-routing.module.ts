@@ -10,6 +10,7 @@ import { ApiCallsComponent } from './api-calls/api-calls.component';
 import { Subject1Component } from './subject1/subject1.component';
 import { Subject2Component } from './subject2/subject2.component';
 import { Subject3Component } from './subject3/subject3.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 const routes: Routes = [ 
   {path : '', component : LandingComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path : 'Subject1', component: Subject1Component},
   {path : 'Subject2', component: Subject2Component},
   {path : 'Subject3', component: Subject3Component},
+  {path : 'ViewChild', component : ViewChildComponent},
   { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 

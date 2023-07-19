@@ -59,4 +59,7 @@ export class LandingComponent {
 subject(){
   this.router.navigateByUrl('Subject1');
 }
+viewData(){
+  this.router.navigateByUrl('ViewChild');
+}
 }

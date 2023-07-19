@@ -8,6 +8,7 @@ import { StoringDataServiceService } from '../storing-data-service.service';
 })
 export class Subject3Component {
   dataFromSub1!: string;
+  surName = 'Shrikhande';
 
   constructor(private storingDataService :StoringDataServiceService){}
 
