@@ -1,0 +1,44 @@
+<!-- <div>
+    <div>
+        <button mat-raised-button color="primary" (click)="Login()">Login</button><br><br>
+        <a routerLink="/owner/ownersignup" mat-raised-button color="accent">Sign Up</a>
+    </div>
+</div> -->
+
+<button mat-raised-button color="accent" (click)="back()">Back</button>
+<form class="form" [formGroup]="loginForm">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>username</mat-label>
+        <input matInput formControlName="userName">
+        <mat-hint class="hint" *ngIf="!loginForm.get('userName')?.touched">
+            Please Enter User Name here</mat-hint>
+            <mat-error *ngIf="loginForm.get('userName')?.hasError('required')">
+                user Name is required
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('userName')?.errors?.['pattern']">
+                pattern not matched
+            </mat-error>
+    </mat-form-field>
+     <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password"  formControlName="password">
+        <mat-hint class="hint" *ngIf="!loginForm.get('password')?.touched">
+            Please enter password </mat-hint>
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            Password is required
+        </mat-error>
+        <mat-error *ngIf="loginForm.get('password')?.errors?.['pattern']">
+            pattern not matched
+        </mat-error>
+    </mat-form-field>
+
+    <div>
+        <button mat-raised-button color="primary"  class="butns" (click)="login()">Login</button> 
+        <a routerLink="/owner/ownersignup" mat-raised-button color="accent" class="butns" >New Owner?</a>
+    </div>
+
+
+
+</form>

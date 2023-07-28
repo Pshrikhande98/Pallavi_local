@@ -1,0 +1,23 @@
+{
+  "admin": [],
+  "owner": [
+    {
+      "UserName": "kishor",
+      "Email": "kishor@gmail.com",
+      "Mobile": "958765432",
+      "Password": "kishor123",
+      "Gender": "male",
+      "id": 3
+    },
+    {
+      "UserName": "Rutuja Kale",
+      "Email": "rutuja@gmail.com",
+      "Mobile": "9862357855",
+      "Password": "rutuja123",
+      "Gender": "female",
+      "id": 4
+    }
+  ],
+  "user": [],
+  "hotelDetails": []
+}
