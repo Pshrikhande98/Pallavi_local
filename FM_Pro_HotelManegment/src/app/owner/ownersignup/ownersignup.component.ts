@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup , Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonApiCallService } from 'src/app/admin/Common/common-api-call.service';
 import { CommonService } from 'src/app/admin/Common/common.service';
@@ -29,9 +29,9 @@ export class OwnersignupComponent {
 
   FormDetails(){
     this.signUpForm = this.fb.group({
-      name:['',[]],
-      pancard:['',[]],
-      email:['',[]],
+      name:['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-Z ]*'),this.commonService.whiteSpaceValidator]],
+      pancard:['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-Z0-9]*')]],
+      email:['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-Z0-9]@*')]],
       mobile:['',[]],
       password:['',[]],
       gender:['',[]],

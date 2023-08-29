@@ -8,6 +8,7 @@ import { OwnerhomeComponent } from './ownerhome/ownerhome.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './admin/Common/shared/shared.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [

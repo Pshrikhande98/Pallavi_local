@@ -7,6 +7,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule} from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { ToastrModule } from 'ngx-toastr';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -19,8 +23,13 @@ import { HttpClientModule} from '@angular/common/http';
     FormsModule,
     MatInputModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    ToastrModule.forRoot(),
+    MatDialogModule
   ],
+  
   exports: [
     MatButtonModule,
     MatCardModule,
@@ -29,7 +38,10 @@ import { HttpClientModule} from '@angular/common/http';
     FormsModule,
     MatInputModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDialogModule
 
   ]
 })
